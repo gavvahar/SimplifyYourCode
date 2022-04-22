@@ -18,6 +18,21 @@ function countTheVowels(text)
   console.log('The vouwel number is', vcount);
   return vcount;
 }
+
+function findTheLongestWord(text)
+{
+  array1 = text.match(/\w[a-z]{0,}/gi);
+  let longest_word = array1[0];
+
+  for(let x = 1 ; x < array1.length ; x++)
+  {
+    if(longest_word.length < array1[x].length)
+    {
+    longest_word = array1[x];
+    } 
+  }
+  return longest_word;
+}
 //convert the first letter of each word to upper case
 let array1 = text.split(' ');
 let newarray1 = [];
@@ -27,19 +42,7 @@ for(let x = 0; x < array1.length; x++){
 }
 let bigText = newarray1.join(' ');
 
-//find the longest word
-array1 = text.match(/\w[a-z]{0,}/gi);
-let longest_word = array1[0];
-
-for(let x = 1 ; x < array1.length ; x++)
-{
-  if(longest_word.length < array1[x].length)
-  {
-  longest_word = array1[x];
-  } 
-}
-
-console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${longest_word}\nThere are ${countTheVowels(text)} vowels`);
+console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${findTheLongestWord(text)}\nThere are ${countTheVowels(text)} vowels`);
 
 //convert the first letter of each word to upper case
 array1 = text2.split(' ');
@@ -50,19 +53,7 @@ for(let x = 0; x < array1.length; x++){
 }
 bigText = newarray1.join(' ');
 
-//find the longest word
-array1 = text2.match(/\w[a-z]{0,}/gi);
-longest_word = array1[0];
-
-for(let x = 1 ; x < array1.length ; x++)
-{
-  if(longest_word.length < array1[x].length)
-  {
-  longest_word = array1[x];
-  } 
-}
-
-console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${longest_word}\nThere are ${countTheVowels(text)} vowels`);
+console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${findTheLongestWord(text)}\nThere are ${countTheVowels(text)} vowels`);
 
 //convert the first letter of each word to upper case
 array1 = text3.split(' ');
@@ -73,16 +64,4 @@ for(let x = 0; x < array1.length; x++){
 }
 bigText = newarray1.join(' ');
 
-//find the longest word
-array1 = text3.match(/\w[a-z]{0,}/gi);
-longest_word = array1[0];
-
-for(let x = 1 ; x < array1.length ; x++)
-{
-  if(longest_word.length < array1[x].length)
-  {
-  longest_word = array1[x];
-  } 
-}
-
-console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${longest_word}\nThere are ${countTheVowels(text)} vowels`);
+console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${findTheLongestWord(text)}\nThere are ${countTheVowels(text)} vowels`);
