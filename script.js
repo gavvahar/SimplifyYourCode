@@ -33,35 +33,22 @@ function findTheLongestWord(text)
   }
   return longest_word;
 }
-//convert the first letter of each word to upper case
-let array1 = text.split(' ');
-let newarray1 = [];
+
+function convertFirstLetterToUpperCase(text)
+{
+  let array1 = text.split(' ');
+  let newarray1 = [];
   
-for(let x = 0; x < array1.length; x++){
+  for(let x = 0; x < array1.length; x++)
+  {
     newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+  }
+  let bigText = newarray1.join(' ');
+  return bigText;
 }
-let bigText = newarray1.join(' ');
 
-console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${findTheLongestWord(text)}\nThere are ${countTheVowels(text)} vowels`);
+console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${convertFirstLetterToUpperCase(text)}\nThe longest word is ${findTheLongestWord(text)}\nThere are ${countTheVowels(text)} vowels`);
 
-//convert the first letter of each word to upper case
-array1 = text2.split(' ');
-newarray1 = [];
-  
-for(let x = 0; x < array1.length; x++){
-    newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
-}
-bigText = newarray1.join(' ');
+console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${convertFirstLetterToUpperCase(text)}\nThe longest word is ${findTheLongestWord(text)}\nThere are ${countTheVowels(text)} vowels`);
 
-console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${findTheLongestWord(text)}\nThere are ${countTheVowels(text)} vowels`);
-
-//convert the first letter of each word to upper case
-array1 = text3.split(' ');
-newarray1 = [];
-  
-for(let x = 0; x < array1.length; x++){
-    newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
-}
-bigText = newarray1.join(' ');
-
-console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${findTheLongestWord(text)}\nThere are ${countTheVowels(text)} vowels`);
+console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${convertFirstLetterToUpperCase(text)}\nThe longest word is ${findTheLongestWord(text)}\nThere are ${countTheVowels(text)} vowels`);
