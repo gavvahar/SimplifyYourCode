@@ -17,7 +17,6 @@ function countTheVowels(text)
       vcount += 1;
     }
   }
-  console.log('The vouwel number is', vcount);
   return vcount;
 }
 
