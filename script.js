@@ -1,6 +1,8 @@
-let text = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-let text2 = "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...";
-let text3 = "Curabitur iaculis, nisl ut tristique fringilla, orci purus rutrum arcu, sed pharetra lectus tortor eget orci."
+const textArr = [
+  "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+  "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...",
+  "Curabitur iaculis, nisl ut tristique fringilla, orci purus rutrum arcu, sed pharetra lectus tortor eget orci."
+];
 
 
 function countTheVowels(text)
@@ -8,9 +10,9 @@ function countTheVowels(text)
   vowel_list = 'aeiouAEIOU';
   vcount = 0;
 
-  for(let x = 0; x < text2.length ; x++)
+  for(let x = 0; x < text.length ; x++)
   {
-    if (vowel_list.indexOf(text2[x]) !== -1)
+    if (vowel_list.indexOf(text[x]) !== -1)
     {
       vcount += 1;
     }
@@ -47,8 +49,10 @@ function convertFirstLetterToUpperCase(text)
   return bigText;
 }
 
-console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${convertFirstLetterToUpperCase(text)}\nThe longest word is ${findTheLongestWord(text)}\nThere are ${countTheVowels(text)} vowels`);
-
-console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${convertFirstLetterToUpperCase(text)}\nThe longest word is ${findTheLongestWord(text)}\nThere are ${countTheVowels(text)} vowels`);
-
-console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${convertFirstLetterToUpperCase(text)}\nThe longest word is ${findTheLongestWord(text)}\nThere are ${countTheVowels(text)} vowels`);
+for (let i = 0; i < textArr.length; i++)
+{
+  const text = textArr[i];
+  console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${convertFirstLetterToUpperCase(text)}\nThe longest word is ${findTheLongestWord(text)}\nThere are ${countTheVowels(text)} vowels`);
+  
+  console.log('==========================\n')
+}
