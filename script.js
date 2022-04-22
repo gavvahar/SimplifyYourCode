@@ -39,19 +39,7 @@ for(let x = 1 ; x < array1.length ; x++)
   } 
 }
 
-//count number of vowels
-let vowel_list = 'aeiouAEIOU';
-let vcount = 0;
-
-for(let x = 0; x < text.length ; x++)
-{
-  if (vowel_list.indexOf(text[x]) !== -1)
-  {
-    vcount += 1;
-  }
-}
-
-console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${longest_word}\nThere are ${vcount} vowels`);
+console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${longest_word}\nThere are ${countTheVowels(text)} vowels`);
 
 //convert the first letter of each word to upper case
 array1 = text2.split(' ');
@@ -74,10 +62,7 @@ for(let x = 1 ; x < array1.length ; x++)
   } 
 }
 
-//count number of vowels
-
-
-console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${longest_word}\nThere are ${vcount} vowels`);
+console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${longest_word}\nThere are ${countTheVowels(text)} vowels`);
 
 //convert the first letter of each word to upper case
 array1 = text3.split(' ');
@@ -100,16 +85,4 @@ for(let x = 1 ; x < array1.length ; x++)
   } 
 }
 
-//count number of vowels
-vowel_list = 'aeiouAEIOU';
-vcount = 0;
-
-for(let x = 0; x < text3.length ; x++)
-{
-  if (vowel_list.indexOf(text3[x]) !== -1)
-  {
-    vcount += 1;
-  }
-}
-
-console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${longest_word}\nThere are ${vcount} vowels`);
+console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${longest_word}\nThere are ${countTheVowels(text)} vowels`);
