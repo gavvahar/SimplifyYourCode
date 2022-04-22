@@ -2,6 +2,22 @@ let text = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, cons
 let text2 = "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...";
 let text3 = "Curabitur iaculis, nisl ut tristique fringilla, orci purus rutrum arcu, sed pharetra lectus tortor eget orci."
 
+
+function countTheVowels(text)
+{
+  vowel_list = 'aeiouAEIOU';
+  vcount = 0;
+
+  for(let x = 0; x < text2.length ; x++)
+  {
+    if (vowel_list.indexOf(text2[x]) !== -1)
+    {
+      vcount += 1;
+    }
+  }
+  console.log('The vouwel number is', vcount);
+  return vcount;
+}
 //convert the first letter of each word to upper case
 let array1 = text.split(' ');
 let newarray1 = [];
@@ -59,16 +75,7 @@ for(let x = 1 ; x < array1.length ; x++)
 }
 
 //count number of vowels
-vowel_list = 'aeiouAEIOU';
-vcount = 0;
 
-for(let x = 0; x < text2.length ; x++)
-{
-  if (vowel_list.indexOf(text2[x]) !== -1)
-  {
-    vcount += 1;
-  }
-}
 
 console.log(`The original string was:\n${text}\nCapitalizing each word looks like:\n${bigText}\nThe longest word is ${longest_word}\nThere are ${vcount} vowels`);
 
